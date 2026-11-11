@@ -1,0 +1,25 @@
+{
+  "name": "@repo/async-job",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "format": "oxfmt --write .",
+    "format:ci": "oxfmt --check .",
+    "lint": "oxlint --config ../../oxlintrc.json --fix .",
+    "lint:ci": "oxlint --config ../../oxlintrc.json --max-warnings 0 .",
+    "check": "pnpm run lint && pnpm run format",
+    "check:ci": "pnpm run lint:ci && pnpm run format:ci"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-translate": "^3.1161.0",
+    "@repo/db": "workspace:*",
+    "@repo/event-utils": "workspace:*",
+    "@repo/shared-types": "workspace:*",
+    "@types/aws-lambda": "^8.10.164",
+    "@types/node": "^26",
+    "drizzle-orm": "^0.45",
+    "typescript": "^5",
+    "zod": "^4.6.7"
+  }
+}
